@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ quiz.quiz_title }} - QuizMaster{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    
+    <!-- Quiz Header & Sticky Timer Bar -->
+    <div class="quiz-timer-box p-3 mb-4 rounded-4 shadow-sm border">
+        <div class="row align-items-center">
+            <div class="col-md-7 mb-2 mb-md-0">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-pill">{{ quiz.category.category_name }}</span>
+                    <h4 class="fw-bold mb-0 text-truncate">{{ quiz.quiz_title }}</h4>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex align-items-center justify-content-md-end gap-3" id="quiz-timer" data-time-limit="{{ quiz.time_limit }}">
+                    <span id="answered-count" class="badge bg-secondary-subtle text-dark px-3 py-2 rounded-pill font-monospace fw-bold">
+                        0 of {{ questions|length }} Answered
+                    </span>
+                    <div class="d-flex align-items-center bg-danger bg-opacity-10 text-danger px-3 py-2 rounded-pill fw-bold border border-danger border-opacity-25">
+                        <i class="bi bi-clock-history me-2 fs-5"></i>
+                        <span id="timer-display" class="fs-5 font-monospace">--:--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress mt-3" style="height: 6px;">
+            <div id="timer-progress-bar" class="progress-bar bg-primary" role="progressbar" style="width: 100%;"></div>
+        </div>
+    </div>
+
+    <!-- Quiz Form -->
+    <form id="quiz-form" action="{{ url_for('quiz.submit_quiz', quiz_id=quiz.quiz_id) }}" method="POST">
+        {% for q in questions %}
+            <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 question-block">
+                <div class="d-flex align-items-start gap-3 mb-3">
+                    <span class="badge bg-primary text-white rounded-circle fs-6 fw-bold d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; flex-shrink: 0;">
+                        {{ loop.index }}
+                    </span>
+                    <h5 class="fw-bold text-dark pt-1 mb-0">{{ q.question }}</h5>
+                </div>
+
+                <div class="options-container ps-md-5">
+                    <!-- Option A -->
+                    <input type="radio" class="btn-check" name="question_{{ q.question_id }}" id="q{{ q.question_id }}_a" value="A" autocomplete="off">
+                    <label class="option-label" for="q{{ q.question_id }}_a">
+                        <span class="option-badge">A</span>
+                        <span>{{ q.option_a }}</span>
+                    </label>
+
+                    <!-- Option B -->
+                    <input type="radio" class="btn-check" name="question_{{ q.question_id }}" id="q{{ q.question_id }}_b" value="B" autocomplete="off">
+                    <label class="option-label" for="q{{ q.question_id }}_b">
+                        <span class="option-badge">B</span>
+                        <span>{{ q.option_b }}</span>
+                    </label>
+
+                    <!-- Option C -->
+                    <input type="radio" class="btn-check" name="question_{{ q.question_id }}" id="q{{ q.question_id }}_c" value="C" autocomplete="off">
+                    <label class="option-label" for="q{{ q.question_id }}_c">
+                        <span class="option-badge">C</span>
+                        <span>{{ q.option_c }}</span>
+                    </label>
+
+                    <!-- Option D -->
+                    <input type="radio" class="btn-check" name="question_{{ q.question_id }}" id="q{{ q.question_id }}_d" value="D" autocomplete="off">
+                    <label class="option-label" for="q{{ q.question_id }}_d">
+                        <span class="option-badge">D</span>
+                        <span>{{ q.option_d }}</span>
+                    </label>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Submit Controls -->
+        <div class="card border-0 shadow-sm rounded-4 p-4 text-center">
+            <h5 class="fw-bold mb-2">Ready to submit your quiz?</h5>
+            <p class="text-muted small mb-3">Please double check your answers before submitting.</p>
+            <div>
+                <button type="submit" class="btn btn-success btn-lg rounded-pill px-5 fw-bold shadow" onclick="return confirm('Are you sure you want to finish and submit your quiz answers?');">
+                    Submit Quiz Now <i class="bi bi-send-fill ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

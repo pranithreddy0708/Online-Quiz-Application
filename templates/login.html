@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if is_admin %}Admin Login{% else %}User Login{% endif %} - QuizMaster{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-5">
+            <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <div class="d-inline-flex p-3 rounded-circle {% if is_admin %}bg-warning-subtle text-warning-emphasis{% else %}bg-primary-subtle text-primary{% endif %} mb-3">
+                        <i class="bi {% if is_admin %}bi-shield-lock-fill{% else %}bi-person-fill-lock{% endif %} fs-1"></i>
+                    </div>
+                    <h2 class="fw-bold mb-1">{% if is_admin %}Admin Portal Login{% else %}Welcome Back{% endif %}</h2>
+                    <p class="text-muted small">{% if is_admin %}Access administrator control panel{% else %}Sign in to start taking quizzes{% endif %}</p>
+                </div>
+
+                <!-- Navigation Switch Tabs -->
+                <ul class="nav nav-pills nav-justified mb-4 bg-light p-1 rounded-pill">
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill py-2 text-decoration-none {% if not is_admin %}active bg-primary text-white fw-semibold{% else %}text-muted{% endif %}" href="{{ url_for('auth.login') }}">
+                            <i class="bi bi-person me-1"></i> User Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill py-2 text-decoration-none {% if is_admin %}active bg-warning text-dark fw-bold{% else %}text-muted{% endif %}" href="{{ url_for('auth.admin_login') }}">
+                            <i class="bi bi-shield-lock me-1"></i> Admin Login
+                        </a>
+                    </li>
+                </ul>
+
+                {% if is_admin %}
+                    <form action="{{ url_for('auth.admin_login') }}" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Admin Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0"><i class="bi bi-person"></i></span>
+                                <input type="text" name="username" class="form-control bg-light border-start-0" placeholder="Enter admin username" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
+                                <input type="password" name="password" class="form-control bg-light border-start-0" placeholder="Enter admin password" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning w-100 py-3 rounded-3 fw-bold shadow-sm">
+                            Login as Admin <i class="bi bi-arrow-right-short ms-1"></i>
+                        </button>
+                    </form>
+                {% else %}
+                    <form action="{{ url_for('auth.login') }}" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope"></i></span>
+                                <input type="email" name="email" class="form-control bg-light border-start-0" placeholder="name@example.com" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
+                                <input type="password" name="password" class="form-control bg-light border-start-0" placeholder="Enter password" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-gradient w-100 py-3 rounded-3 fw-semibold shadow-sm">
+                            Log In <i class="bi bi-box-arrow-in-right ms-1"></i>
+                        </button>
+                    </form>
+
+                    <div class="text-center mt-4 border-top pt-3">
+                        <p class="text-muted small mb-0">Don't have an account? <a href="{{ url_for('auth.register') }}" class="fw-bold text-primary text-decoration-none">Register here</a></p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

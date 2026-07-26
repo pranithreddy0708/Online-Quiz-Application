@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz Results - QuizMaster{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    
+    <!-- Result Summary Banner -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-4 text-center p-4 p-md-5 overflow-hidden position-relative">
+                <div class="d-inline-flex p-3 rounded-circle {% if result.percentage >= 70 %}bg-success-subtle text-success{% elif result.percentage >= 50 %}bg-warning-subtle text-warning-emphasis{% else %}bg-danger-subtle text-danger{% endif %} mb-3 mx-auto">
+                    <i class="bi {% if result.percentage >= 70 %}bi-trophy-fill{% elif result.percentage >= 50 %}bi-emoji-smile-fill{% else %}bi-exclamation-triangle-fill{% endif %} fs-1"></i>
+                </div>
+
+                <h2 class="fw-bold mb-1">{{ quiz.quiz_title }} - Results</h2>
+                <p class="text-muted small mb-4">Completed on {{ result.completed_at.strftime('%B %d, %Y at %I:%M %p') }}</p>
+
+                <div class="row g-3 justify-content-center mb-4">
+                    <div class="col-6 col-md-4">
+                        <div class="bg-light p-3 rounded-3">
+                            <span class="text-muted small d-block">Score</span>
+                            <h3 class="fw-extrabold text-primary mb-0">{{ result.score }} / {{ result.total_marks }}</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="bg-light p-3 rounded-3">
+                            <span class="text-muted small d-block">Percentage</span>
+                            <h3 class="fw-extrabold {% if result.percentage >= 70 %}text-success{% elif result.percentage >= 50 %}text-warning{% else %}text-danger{% endif %} mb-0">{{ result.percentage }}%</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="{{ url_for('quiz.start_quiz', quiz_id=quiz.quiz_id) }}" class="btn btn-primary-gradient rounded-pill px-4">
+                        <i class="bi bi-arrow-repeat me-1"></i> Retake Quiz
+                    </a>
+                    <a href="{{ url_for('quiz.leaderboard') }}" class="btn btn-outline-warning text-dark rounded-pill px-4">
+                        <i class="bi bi-trophy me-1"></i> View Leaderboard
+                    </a>
+                    <a href="{{ url_for('user.dashboard') }}" class="btn btn-outline-secondary rounded-pill px-4">
+                        <i class="bi bi-speedometer2 me-1"></i> Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Answers Breakdown -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <h4 class="fw-bold mb-4"><i class="bi bi-list-check text-primary me-2"></i> Answer Review</h4>
+
+            {% for item in detailed_results %}
+                <div class="card border-0 shadow-sm rounded-4 p-4 mb-3 border-start border-4 {% if item.is_correct %}border-success{% elif item.user_answer %}border-danger{% else %}border-secondary{% endif %}">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h6 class="fw-bold text-dark mb-0">Q{{ loop.index }}. {{ item.question }}</h6>
+                        {% if item.is_correct %}
+                            <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill"><i class="bi bi-check-circle-fill me-1"></i> Correct (+1)</span>
+                        {% elif item.user_answer %}
+                            <span class="badge bg-danger-subtle text-danger px-3 py-1 rounded-pill"><i class="bi bi-x-circle-fill me-1"></i> Incorrect</span>
+                        {% else %}
+                            <span class="badge bg-secondary-subtle text-secondary px-3 py-1 rounded-pill"><i class="bi bi-dash-circle-fill me-1"></i> Not Answered</span>
+                        {% endif %}
+                    </div>
+
+                    <div class="row g-2 mt-2 small">
+                        <div class="col-md-6">
+                            <div class="p-2 rounded bg-light">
+                                <strong>A:</strong> {{ item.option_a }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2 rounded bg-light">
+                                <strong>B:</strong> {{ item.option_b }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2 rounded bg-light">
+                                <strong>C:</strong> {{ item.option_c }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2 rounded bg-light">
+                                <strong>D:</strong> {{ item.option_d }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 mt-3 pt-2 border-top small">
+                        <span class="text-success fw-bold"><i class="bi bi-check2 me-1"></i> Correct Answer: Option {{ item.correct_answer }}</span>
+                        {% if item.user_answer %}
+                            <span class="{% if item.is_correct %}text-success{% else %}text-danger{% endif %} fw-semibold">
+                                Your Choice: Option {{ item.user_answer }}
+                            </span>
+                        {% else %}
+                            <span class="text-muted italic">You did not select an answer for this question.</span>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
