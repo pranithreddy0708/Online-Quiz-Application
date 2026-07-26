@@ -4,6 +4,21 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 ---
 
+## 🌐 Live Server Access & Application Links
+
+When running the application locally (`python app.py`), access the server via:
+
+- 🏠 **Main Application URL**: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+- 🛡️ **Admin Portal**: [http://127.0.0.1:5000/admin/login](http://127.0.0.1:5000/admin/login)
+  - **Username**: `pranith0708`
+  - **Password**: `mrec2024`
+- 👤 **User Login**: [http://127.0.0.1:5000/login](http://127.0.0.1:5000/login)
+  - **Email**: `john@example.com`
+  - **Password**: `user123`
+
+---
+
+
 ## 🌟 Key Features
 
 ### 👤 User Module
