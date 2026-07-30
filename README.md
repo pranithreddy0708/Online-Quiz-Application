@@ -8,11 +8,11 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 When running the application locally (`python app.py`), access the server via:
 
-- 🏠 **Main Application URL**: [http://127.0.0.1:5000](http://127.0.0.1:5000)
-- 🛡️ **Admin Portal**: [http://127.0.0.1:5000/admin/login](http://127.0.0.1:5000/admin/login)
+- 🏠 **Main Application URL**: [http://127.0.0.1:5500](http://127.0.0.1:5500)
+- 🛡️ **Admin Portal**: [http://127.0.0.1:5500/admin/login](http://127.0.0.1:5500/admin/login)
   - **Username**: `pranith0708`
   - **Password**: `mrec2024`
-- 👤 **User Login**: [http://127.0.0.1:5000/login](http://127.0.0.1:5000/login)
+- 👤 **User Login**: [http://127.0.0.1:5500/login](http://127.0.0.1:5500/login)
   - **Email**: `john@example.com`
   - **Password**: `user123`
 
@@ -178,20 +178,20 @@ Import the provided `database.sql` script into your MySQL database.
 ```bash
 python app.py
 ```
-Open your browser and visit: **`http://127.0.0.1:5000`**
+Open your browser and visit: **`http://127.0.0.1:5500`**
 
 ---
 
 ## 🔑 Default Credentials
 
 ### 🛡️ Admin Account
-- **URL**: `http://127.0.0.1:5000/admin/login`
+- **URL**: `http://127.0.0.1:5500/admin/login`
 - **Username**: `pranith0708`
 - **Password**: `mrec2024`
 
 
 ### 👤 Sample User Account
-- **URL**: `http://127.0.0.1:5000/login`
+- **URL**: `http://127.0.0.1:5500/login`
 - **Email**: `john@example.com`
 - **Password**: `user123`
 
