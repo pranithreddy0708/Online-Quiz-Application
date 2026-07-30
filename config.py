@@ -21,7 +21,7 @@ class Config:
     DATABASE_URL = os.environ.get('DATABASE_URL')
     if not DATABASE_URL:
         # Check if USE_SQLITE flag or fallback is requested
-        if os.environ.get('USE_SQLITE', 'false').lower() == 'true':
+        if os.environ.get('USE_SQLITE', 'true').lower() == 'true':
             DATABASE_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'online_quiz.db')
         else:
             if DB_PASSWORD:
