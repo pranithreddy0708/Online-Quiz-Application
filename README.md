@@ -4,17 +4,15 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 ---
 
-## 🌐 Live Server Access & Application Links
+## 🌐 Live Server Access & Application Link
 
-You can access the live application directly from any device or phone via the public live link below:
+Use the single live link below to access the application on **any device** (PC, Mobile, Tablet, Laptop) from any network:
 
-- 🚀 **Live Online Application (Any Device / Phone)**: [https://online-quiz-app-pranith.loca.lt](https://online-quiz-app-pranith.loca.lt)
-- 🏠 **Local Access (This Computer)**: [http://127.0.0.1:5500](http://127.0.0.1:5500)
-- 📱 **Network Access (Same Wi-Fi)**: `http://172.17.2.135:5500`
+- 🚀 **Live Application Link (All Devices)**: [https://online-quiz-app-pranith.loca.lt](https://online-quiz-app-pranith.loca.lt)
 
 ---
 
-### 🔑 Default Credentials
+### 🔑 Login Credentials
 
 - 🛡️ **Admin Portal**: [https://online-quiz-app-pranith.loca.lt/admin/login](https://online-quiz-app-pranith.loca.lt/admin/login)
   - **Username**: `pranith0708`
@@ -186,20 +184,20 @@ Import the provided `database.sql` script into your MySQL database.
 ```bash
 python app.py
 ```
-Open your browser and visit: **`http://127.0.0.1:5500`**
+Open your browser on any device and visit: **`https://online-quiz-app-pranith.loca.lt`**
 
 ---
 
 ## 🔑 Default Credentials
 
 ### 🛡️ Admin Account
-- **URL**: `http://127.0.0.1:5500/admin/login`
+- **URL**: [https://online-quiz-app-pranith.loca.lt/admin/login](https://online-quiz-app-pranith.loca.lt/admin/login)
 - **Username**: `pranith0708`
 - **Password**: `mrec2024`
 
 
 ### 👤 Sample User Account
-- **URL**: `http://127.0.0.1:5500/login`
+- **URL**: [https://online-quiz-app-pranith.loca.lt/login](https://online-quiz-app-pranith.loca.lt/login)
 - **Email**: `john@example.com`
 - **Password**: `user123`
 

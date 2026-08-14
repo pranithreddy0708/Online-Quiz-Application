@@ -57,8 +57,8 @@ if __name__ == '__main__':
     local_ip = get_local_ip()
     print("\n" + "=" * 65)
     print(" === QuizMaster Application Server Started ===")
-    print(f" Local computer (this PC): http://127.0.0.1:5500")
-    print(f" Other devices (same Wi-Fi): http://{local_ip}:5500")
+    print(" Universal Live Link (Works on ALL Devices & Networks):")
+    print(" https://online-quiz-app-pranith.loca.lt")
     print("=" * 65 + "\n")
 
     app.run(host='0.0.0.0', port=5500, debug=True)
