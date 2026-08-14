@@ -8,17 +8,17 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 Use the single live link below to access the application on **any device** (PC, Mobile, Tablet, Laptop) from any network:
 
-- 🚀 **Live Application Link (All Devices)**: [https://online-quiz-application.loca.lt](https://online-quiz-application.loca.lt)
+- 🚀 **Live Application Link (All Devices)**: [https://anaheim-project-federal-remedy.trycloudflare.com](https://anaheim-project-federal-remedy.trycloudflare.com)
 
 ---
 
 ### 🔑 Login Credentials
 
-- 🛡️ **Admin Portal**: [https://online-quiz-application.loca.lt/admin/login](https://online-quiz-application.loca.lt/admin/login)
+- 🛡️ **Admin Portal**: [https://anaheim-project-federal-remedy.trycloudflare.com/admin/login](https://anaheim-project-federal-remedy.trycloudflare.com/admin/login)
   - **Username**: `pranith0708`
   - **Password**: `mrec2024`
 
-- 👤 **User Login**: [https://online-quiz-application.loca.lt/login](https://online-quiz-application.loca.lt/login)
+- 👤 **User Login**: [https://anaheim-project-federal-remedy.trycloudflare.com/login](https://anaheim-project-federal-remedy.trycloudflare.com/login)
   - **Email**: `john@example.com`
   - **Password**: `user123`
 
@@ -184,20 +184,20 @@ Import the provided `database.sql` script into your MySQL database.
 ```bash
 python app.py
 ```
-Open your browser on any device and visit: **`https://online-quiz-application.loca.lt`**
+Open your browser on any device and visit: **`https://anaheim-project-federal-remedy.trycloudflare.com`**
 
 ---
 
 ## 🔑 Default Credentials
 
 ### 🛡️ Admin Account
-- **URL**: [https://online-quiz-application.loca.lt/admin/login](https://online-quiz-application.loca.lt/admin/login)
+- **URL**: [https://anaheim-project-federal-remedy.trycloudflare.com/admin/login](https://anaheim-project-federal-remedy.trycloudflare.com/admin/login)
 - **Username**: `pranith0708`
 - **Password**: `mrec2024`
 
 
 ### 👤 Sample User Account
-- **URL**: [https://online-quiz-application.loca.lt/login](https://online-quiz-application.loca.lt/login)
+- **URL**: [https://anaheim-project-federal-remedy.trycloudflare.com/login](https://anaheim-project-federal-remedy.trycloudflare.com/login)
 - **Email**: `john@example.com`
 - **Password**: `user123`
 

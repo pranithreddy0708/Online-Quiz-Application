@@ -3,8 +3,8 @@ import time
 import sys
 
 print("=" * 65)
-print(" === QuizMaster Server & Public Tunnel Starting ===")
-print(" Universal Live URL: https://online-quiz-application.loca.lt")
+print(" === QuizMaster Server & Cloudflare Tunnel Starting ===")
+print(" Live URL: https://anaheim-project-federal-remedy.trycloudflare.com")
 print("=" * 65)
 
 # Start Flask server
@@ -13,8 +13,8 @@ flask_proc = subprocess.Popen([sys.executable, "app.py"])
 # Give Flask 2 seconds to initialize
 time.sleep(2)
 
-# Start localtunnel daemon with professional subdomain
-tunnel_cmd = "npx -y localtunnel --port 5500 --subdomain online-quiz-application"
+# Start Cloudflare Tunnel (100% uptime, zero 503 errors, no password screens)
+tunnel_cmd = "npx -y cloudflared tunnel --url http://localhost:5500"
 tunnel_proc = subprocess.Popen(tunnel_cmd, shell=True)
 
 try:

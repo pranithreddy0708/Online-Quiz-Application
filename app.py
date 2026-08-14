@@ -64,8 +64,8 @@ if __name__ == '__main__':
     local_ip = get_local_ip()
     print("\n" + "=" * 65)
     print(" === QuizMaster Application Server Started ===")
-    print(" Universal Live Link (Works on ALL Devices):")
-    print(" https://online-quiz-application.loca.lt")
+    print(" Universal Live Link (Cloudflare Tunnel - All Devices):")
+    print(" https://anaheim-project-federal-remedy.trycloudflare.com")
     print("=" * 65 + "\n")
 
     app.run(host='0.0.0.0', port=5500, debug=True)
