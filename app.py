@@ -1,4 +1,5 @@
 import os
+import socket
 from flask import Flask, render_template
 from config import Config
 from models import db
@@ -6,6 +7,16 @@ from routes.auth_routes import auth_bp
 from routes.user_routes import user_bp
 from routes.admin_routes import admin_bp
 from routes.quiz_routes import quiz_bp
+
+def get_local_ip():
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception:
+        return "127.0.0.1"
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -42,4 +53,12 @@ app = create_app()
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
+    
+    local_ip = get_local_ip()
+    print("\n" + "=" * 65)
+    print(" === QuizMaster Application Server Started ===")
+    print(f" Local computer (this PC): http://127.0.0.1:5500")
+    print(f" Other devices (same Wi-Fi): http://{local_ip}:5500")
+    print("=" * 65 + "\n")
+
     app.run(host='0.0.0.0', port=5500, debug=True)

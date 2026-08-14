@@ -8,7 +8,8 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 When running the application locally (`python app.py`), access the server via:
 
-- 🏠 **Main Application URL**: [http://127.0.0.1:5500](http://127.0.0.1:5500)
+- 🏠 **Local Access (This Computer)**: [http://127.0.0.1:5500](http://127.0.0.1:5500)
+- 📱 **Network Access (Other Devices on same Wi-Fi)**: `http://<YOUR_COMPUTER_IP>:5500` (e.g. `http://172.17.2.135:5500`)
 - 🛡️ **Admin Portal**: [http://127.0.0.1:5500/admin/login](http://127.0.0.1:5500/admin/login)
   - **Username**: `pranith0708`
   - **Password**: `mrec2024`
