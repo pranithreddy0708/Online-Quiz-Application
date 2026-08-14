@@ -6,14 +6,21 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 ## 🌐 Live Server Access & Application Links
 
-When running the application locally (`python app.py`), access the server via:
+You can access the live application directly from any device or phone via the public live link below:
 
+- 🚀 **Live Online Application (Any Device / Phone)**: [https://online-quiz-app-pranith.loca.lt](https://online-quiz-app-pranith.loca.lt)
 - 🏠 **Local Access (This Computer)**: [http://127.0.0.1:5500](http://127.0.0.1:5500)
-- 📱 **Network Access (Other Devices on same Wi-Fi)**: `http://<YOUR_COMPUTER_IP>:5500` (e.g. `http://172.17.2.135:5500`)
-- 🛡️ **Admin Portal**: [http://127.0.0.1:5500/admin/login](http://127.0.0.1:5500/admin/login)
+- 📱 **Network Access (Same Wi-Fi)**: `http://172.17.2.135:5500`
+
+---
+
+### 🔑 Default Credentials
+
+- 🛡️ **Admin Portal**: [https://online-quiz-app-pranith.loca.lt/admin/login](https://online-quiz-app-pranith.loca.lt/admin/login)
   - **Username**: `pranith0708`
   - **Password**: `mrec2024`
-- 👤 **User Login**: [http://127.0.0.1:5500/login](http://127.0.0.1:5500/login)
+
+- 👤 **User Login**: [https://online-quiz-app-pranith.loca.lt/login](https://online-quiz-app-pranith.loca.lt/login)
   - **Email**: `john@example.com`
   - **Password**: `user123`
 
