@@ -13,8 +13,8 @@ flask_proc = subprocess.Popen([sys.executable, "app.py"])
 # Give Flask 2 seconds to initialize
 time.sleep(2)
 
-# Start localtunnel daemon
-tunnel_cmd = "npx -y localtunnel --port 5500 --subdomain online-quiz-app-pranith"
+# Start Cloudflare Tunnel (100% reliable, no password prompt, no 503 errors)
+tunnel_cmd = "npx -y cloudflared tunnel --url http://localhost:5500"
 tunnel_proc = subprocess.Popen(tunnel_cmd, shell=True)
 
 try:

@@ -8,17 +8,17 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 Use the single live link below to access the application on **any device** (PC, Mobile, Tablet, Laptop) from any network:
 
-- 🚀 **Live Application Link (All Devices)**: [https://online-quiz-app-pranith.loca.lt](https://online-quiz-app-pranith.loca.lt)
+- 🚀 **Live Application Link (All Devices)**: [https://vpn-fuji-robert-normally.trycloudflare.com](https://vpn-fuji-robert-normally.trycloudflare.com)
 
 ---
 
 ### 🔑 Login Credentials
 
-- 🛡️ **Admin Portal**: [https://online-quiz-app-pranith.loca.lt/admin/login](https://online-quiz-app-pranith.loca.lt/admin/login)
+- 🛡️ **Admin Portal**: [https://vpn-fuji-robert-normally.trycloudflare.com/admin/login](https://vpn-fuji-robert-normally.trycloudflare.com/admin/login)
   - **Username**: `pranith0708`
   - **Password**: `mrec2024`
 
-- 👤 **User Login**: [https://online-quiz-app-pranith.loca.lt/login](https://online-quiz-app-pranith.loca.lt/login)
+- 👤 **User Login**: [https://vpn-fuji-robert-normally.trycloudflare.com/login](https://vpn-fuji-robert-normally.trycloudflare.com/login)
   - **Email**: `john@example.com`
   - **Password**: `user123`
 
@@ -184,20 +184,20 @@ Import the provided `database.sql` script into your MySQL database.
 ```bash
 python app.py
 ```
-Open your browser on any device and visit: **`https://online-quiz-app-pranith.loca.lt`**
+Open your browser on any device and visit: **`https://vpn-fuji-robert-normally.trycloudflare.com`**
 
 ---
 
 ## 🔑 Default Credentials
 
 ### 🛡️ Admin Account
-- **URL**: [https://online-quiz-app-pranith.loca.lt/admin/login](https://online-quiz-app-pranith.loca.lt/admin/login)
+- **URL**: [https://vpn-fuji-robert-normally.trycloudflare.com/admin/login](https://vpn-fuji-robert-normally.trycloudflare.com/admin/login)
 - **Username**: `pranith0708`
 - **Password**: `mrec2024`
 
 
 ### 👤 Sample User Account
-- **URL**: [https://online-quiz-app-pranith.loca.lt/login](https://online-quiz-app-pranith.loca.lt/login)
+- **URL**: [https://vpn-fuji-robert-normally.trycloudflare.com/login](https://vpn-fuji-robert-normally.trycloudflare.com/login)
 - **Email**: `john@example.com`
 - **Password**: `user123`
 
