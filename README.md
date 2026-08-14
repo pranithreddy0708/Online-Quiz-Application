@@ -8,17 +8,17 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 Use the single live link below to access the application on **any device** (PC, Mobile, Tablet, Laptop) from any network:
 
-- 🚀 **Live Application Link (All Devices)**: [https://vpn-fuji-robert-normally.trycloudflare.com](https://vpn-fuji-robert-normally.trycloudflare.com)
+- 🚀 **Live Application Link (All Devices)**: [https://online-quiz-application.loca.lt](https://online-quiz-application.loca.lt)
 
 ---
 
 ### 🔑 Login Credentials
 
-- 🛡️ **Admin Portal**: [https://vpn-fuji-robert-normally.trycloudflare.com/admin/login](https://vpn-fuji-robert-normally.trycloudflare.com/admin/login)
+- 🛡️ **Admin Portal**: [https://online-quiz-application.loca.lt/admin/login](https://online-quiz-application.loca.lt/admin/login)
   - **Username**: `pranith0708`
   - **Password**: `mrec2024`
 
-- 👤 **User Login**: [https://vpn-fuji-robert-normally.trycloudflare.com/login](https://vpn-fuji-robert-normally.trycloudflare.com/login)
+- 👤 **User Login**: [https://online-quiz-application.loca.lt/login](https://online-quiz-application.loca.lt/login)
   - **Email**: `john@example.com`
   - **Password**: `user123`
 
@@ -184,20 +184,20 @@ Import the provided `database.sql` script into your MySQL database.
 ```bash
 python app.py
 ```
-Open your browser on any device and visit: **`https://vpn-fuji-robert-normally.trycloudflare.com`**
+Open your browser on any device and visit: **`https://online-quiz-application.loca.lt`**
 
 ---
 
 ## 🔑 Default Credentials
 
 ### 🛡️ Admin Account
-- **URL**: [https://vpn-fuji-robert-normally.trycloudflare.com/admin/login](https://vpn-fuji-robert-normally.trycloudflare.com/admin/login)
+- **URL**: [https://online-quiz-application.loca.lt/admin/login](https://online-quiz-application.loca.lt/admin/login)
 - **Username**: `pranith0708`
 - **Password**: `mrec2024`
 
 
 ### 👤 Sample User Account
-- **URL**: [https://vpn-fuji-robert-normally.trycloudflare.com/login](https://vpn-fuji-robert-normally.trycloudflare.com/login)
+- **URL**: [https://online-quiz-application.loca.lt/login](https://online-quiz-application.loca.lt/login)
 - **Email**: `john@example.com`
 - **Password**: `user123`
 

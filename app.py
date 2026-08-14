@@ -46,6 +46,13 @@ def create_app(config_class=Config):
     def internal_server_error(e):
         return render_template('error.html', error_code=500, error_message="Internal Server Error - Something went wrong on our end."), 500
 
+    @app.after_request
+    def add_tunnel_headers(response):
+        response.headers['Bypass-Tunnel-Remainder'] = 'true'
+        response.headers['localtunnel-skip-warning'] = 'true'
+        response.headers['ngrok-skip-browser-warning'] = 'true'
+        return response
+
     return app
 
 app = create_app()
@@ -57,8 +64,8 @@ if __name__ == '__main__':
     local_ip = get_local_ip()
     print("\n" + "=" * 65)
     print(" === QuizMaster Application Server Started ===")
-    print(" Universal Live Link (Cloudflare Tunnel - All Devices):")
-    print(" https://vpn-fuji-robert-normally.trycloudflare.com")
+    print(" Universal Live Link (Works on ALL Devices):")
+    print(" https://online-quiz-application.loca.lt")
     print("=" * 65 + "\n")
 
     app.run(host='0.0.0.0', port=5500, debug=True)
