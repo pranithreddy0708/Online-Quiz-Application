@@ -4,7 +4,7 @@ import sys
 
 print("=" * 65)
 print(" === QuizMaster Server & Cloudflare Tunnel Starting ===")
-print(" Live URL: https://anaheim-project-federal-remedy.trycloudflare.com")
+print(" Live URL: https://alpine-career-wear-pipes.trycloudflare.com")
 print("=" * 65)
 
 # Start Flask server

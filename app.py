@@ -65,7 +65,7 @@ if __name__ == '__main__':
     print("\n" + "=" * 65)
     print(" === QuizMaster Application Server Started ===")
     print(" Universal Live Link (Cloudflare Tunnel - All Devices):")
-    print(" https://anaheim-project-federal-remedy.trycloudflare.com")
+    print(" https://alpine-career-wear-pipes.trycloudflare.com")
     print("=" * 65 + "\n")
 
     app.run(host='0.0.0.0', port=5500, debug=True)

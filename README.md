@@ -8,17 +8,17 @@ A complete, modern, professional, and fully responsive **Online Quiz Application
 
 Use the single live link below to access the application on **any device** (PC, Mobile, Tablet, Laptop) from any network:
 
-- 🚀 **Live Application Link (All Devices)**: [https://anaheim-project-federal-remedy.trycloudflare.com](https://anaheim-project-federal-remedy.trycloudflare.com)
+- 🚀 **Live Application Link (All Devices)**: [QuizMaster - Learn, Test & Excel](https://alpine-career-wear-pipes.trycloudflare.com/)
 
 ---
 
 ### 🔑 Login Credentials
 
-- 🛡️ **Admin Portal**: [https://anaheim-project-federal-remedy.trycloudflare.com/admin/login](https://anaheim-project-federal-remedy.trycloudflare.com/admin/login)
+- 🛡️ **Admin Portal**: [https://alpine-career-wear-pipes.trycloudflare.com/admin/login](https://alpine-career-wear-pipes.trycloudflare.com/admin/login)
   - **Username**: `pranith0708`
   - **Password**: `mrec2024`
 
-- 👤 **User Login**: [https://anaheim-project-federal-remedy.trycloudflare.com/login](https://anaheim-project-federal-remedy.trycloudflare.com/login)
+- 👤 **User Login**: [https://alpine-career-wear-pipes.trycloudflare.com/login](https://alpine-career-wear-pipes.trycloudflare.com/login)
   - **Email**: `john@example.com`
   - **Password**: `user123`
 
@@ -184,20 +184,20 @@ Import the provided `database.sql` script into your MySQL database.
 ```bash
 python app.py
 ```
-Open your browser on any device and visit: **`https://anaheim-project-federal-remedy.trycloudflare.com`**
+Open your browser on any device and visit: **`https://alpine-career-wear-pipes.trycloudflare.com`**
 
 ---
 
 ## 🔑 Default Credentials
 
 ### 🛡️ Admin Account
-- **URL**: [https://anaheim-project-federal-remedy.trycloudflare.com/admin/login](https://anaheim-project-federal-remedy.trycloudflare.com/admin/login)
+- **URL**: [https://alpine-career-wear-pipes.trycloudflare.com/admin/login](https://alpine-career-wear-pipes.trycloudflare.com/admin/login)
 - **Username**: `pranith0708`
 - **Password**: `mrec2024`
 
 
 ### 👤 Sample User Account
-- **URL**: [https://anaheim-project-federal-remedy.trycloudflare.com/login](https://anaheim-project-federal-remedy.trycloudflare.com/login)
+- **URL**: [https://alpine-career-wear-pipes.trycloudflare.com/login](https://alpine-career-wear-pipes.trycloudflare.com/login)
 - **Email**: `john@example.com`
 - **Password**: `user123`
 
